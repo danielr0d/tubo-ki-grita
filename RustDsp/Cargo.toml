@@ -1,0 +1,18 @@
+[package]
+name = "ts9_dsp"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib"]
+name = "ts9_dsp"
+path = "src/lib.rs"
+
+[dependencies]
+# Nenhuma dependência externa necessária para o core DSP
+# Manteremos o código puro Rust para máxima performance e portabilidade
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
