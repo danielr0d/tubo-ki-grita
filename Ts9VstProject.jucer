@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="Ts9VST" name="TS9 Tube Screamer" projectType="audioplug" useAppConfig="0"
+<JUCERPROJECT id="Ts9VST" name="Tubo Ki Grita" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" jucerVersion="7.0.0">
   <MAINGROUP id="Ts9VST" name="TS9 Tube Screamer">
     <GROUP id="{73A42FE8-3E3B-1234-5678-901234567890}" name="Source">
