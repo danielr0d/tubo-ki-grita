@@ -143,7 +143,7 @@ pub extern "C" fn process_ts9_block(
     unsafe {
         let dsp = &mut *dsp;
         let inputs_slice = std::slice::from_raw_parts(inputs, num_channels as usize);
-        let outputs_slice = std::slice::from_raw_parts_mut(outputs, num_channels as usize);
+        let outputs_slice = std::slice::from_raw_parts_mut(outputs as *mut *mut f32, num_channels as usize);
         let num_samples = num_samples as usize;
 
         // Processar cada canal

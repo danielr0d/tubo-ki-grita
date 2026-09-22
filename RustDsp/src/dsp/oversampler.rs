@@ -83,7 +83,7 @@ mod tests {
 
     #[test]
     fn test_oversampler_buffer_size() {
-        let os = Oversampler2x::new(44100.0);
+        let mut os = Oversampler2x::new(44100.0);
         let input = vec![0.5, 0.3, -0.2];
         let upsampled = os.upsample(&input);
         assert_eq!(upsampled.len(), input.len() * 2);

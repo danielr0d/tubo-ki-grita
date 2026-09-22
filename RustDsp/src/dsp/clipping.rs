@@ -36,8 +36,9 @@ impl SoftClipping {
     /// f(x) = a*x + b*x^3
     /// Suave e contínua com derivada contínua (importante para estabilidade)
     fn soft_clip_cubic(&self, x: f32) -> f32 {
-        // Ganho aproximado baseado na resistência série
-        let a = 1.0 / (1.0 + self.series_resistance / 1000.0);
+        // Ganho aproximado baseado na resistência série vs. a alta impedância
+        // de entrada do estágio seguinte (~1M ohms, típico de buffer op-amp)
+        let a = 1.0 / (1.0 + self.series_resistance / 1_000_000.0);
         
         // Região linear - para valores pequenos, comporta-se quase linearmente
         if x.abs() < 0.5 {
