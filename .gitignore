@@ -1,0 +1,17 @@
+# Rust
+RustDsp/target/
+RustDsp/Cargo.lock
+
+# JUCE / Projucer generated
+Builds/
+JuceLibraryCode/
+*.jucer.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
